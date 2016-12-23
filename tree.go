@@ -16,7 +16,7 @@ import (
 // Struct representing a Node in the i3 tree. For documentation of the fields,
 // refer to http://i3wm.org/docs/ipc.html#_tree_reply.
 type I3Node struct {
-	Id                   int32
+	Id                   int64
 	Name                 string
 	Type                 string
 	Border               string
@@ -30,6 +30,7 @@ type I3Node struct {
 	Geometry             Rect
 	Window               int32
 	Urgent               bool
+	Focus                []int64
 	Focused              bool
 	Floating_Nodes       []I3Node
 	Nodes                []I3Node
