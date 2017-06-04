@@ -131,3 +131,14 @@ func (self *I3Node) Workspace() *I3Node {
 
 	return self.Parent.Workspace()
 }
+
+// HasMark returns true if this node has the given mark
+func (self *I3Node) HasMark(mark string) bool {
+	for _, m := range self.Marks {
+		if m == mark {
+			return true
+		}
+	}
+
+	return false
+}

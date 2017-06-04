@@ -30,6 +30,7 @@ type I3Node struct {
 	Geometry             Rect
 	Window               int32
 	Urgent               bool
+	Marks                []string
 	Focus                []int64
 	Focused              bool
 	Floating_Nodes       []I3Node
